@@ -5,10 +5,10 @@ export function Navbar(props) {
     return (
         <div className="navbar sticky-top navbar-light bg-light">
                     <div class="col">
-                        <h3>CLICK IT GAME</h3>
+                    <h5>"Another classic game by Nate Elorreaga"<h6><i> - Forbes Fake Magazine</i></h6></h5>
                     </div>
                     <div class="col">
-                        <h3 className>Click an image to start!</h3>
+                        <h3 className>Click a unique image to score points!</h3>
                     </div>
                     <div class="col">
                         <h3>Score: {props.score} | High Score:{props.totalScore}</h3>

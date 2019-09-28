@@ -1,42 +1,68 @@
-import React,{ Component } from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import { Navbar } from './components/Navbar';
 import { Jumbotron } from './components/Jumbotron';
 import { Container, Row, Col } from './components/CardContainer';
 import { Image } from './components/Image'
-
-// import all images
-import blackBerryKush from './Images/blackBerryKush.JPG'
-import bubbaKush from './Images/bubbaKush.JPG'
-import cheese from './Images/cheese.JPG'
-import chocolope from './Images/chocolope.JPG'
-import godsGift from './Images/godsGift.JPG'
-import goldenGoat from './Images/goldenGoat.JPG'
-import grapeApe from './Images/grapeApe.JPG'
-import lemonHaze from './Images/lemonHaze.JPG'
-import mauiWowie from './Images/mauiWowie.JPG'
-import pineappleExpress from './Images/pineappleExpress.JPG'
-import purpleUrkle from './Images/purpleUrkle.JPG'
-import trainWreck from './Images/trainWreck.JPG'
+import images from './images.json';
 
 
 class App extends Component {
-  state = {
-    score: 0,
-    totalScore: 12,
-    images: [blackBerryKush,bubbaKush,cheese,chocolope,godsGift,goldenGoat,grapeApe,lemonHaze,mauiWowie,pineappleExpress,purpleUrkle,trainWreck]
+  constructor(props) {
+    super(props);
+    this.state = {
+      score: 0,
+      totalScore: 0,
+      clickedImages: []
+    }
+    this.handleClick = this.handleClick.bind(this);
   }
+
+  handleClick = id => {
+    console.log('Clicked this ' + id);
+    this.checkClicked(id);
+    this.shuffle(images);
+  }
+
+  checkClicked = (id) => {
+    this.setState(state => {
+      const list = state.clickedImages.push(id);
+      return { list };
+    });
+
+    console.log(this.state.clickedImages);
+    this.setState({ score: this.state.score + 1 });
+    for (var i = 0; i < this.state.clickedImages.length; i++) {
+      if (id === this.state.clickedImages[i]) {
+        if (this.state.score > this.state.totalScore) {
+          this.setState({ totalScore: this.state.score });
+        }
+        this.setState({ clickedImages: [] });
+        this.setState({ score: 0 });
+      }
+    }
+  }
+
+  shuffle = (array) => {
+    array.sort(() => Math.random() - 0.5);
+  }
+
   render() {
     return (
       <div className="App">
-        <Navbar />
+        <Navbar 
+        score={this.state.score} 
+        totalScore={this.state.totalScore}/>
         <Jumbotron />
         <Container>
           <Row>
             <Col>
-              {this.state.images.map((image) =>
+              {images.map((image) =>
                 <Image
-                  src={image}
+                  key={image.id}
+                  src={image.src}
+                  id={image.id}
+                  name={image.name}
                   onClick={this.handleClick} />
               )}
             </Col>

@@ -1,0 +1,60 @@
+[{
+    "name": "headband",
+    "src": "https://d3ix816x6wuc0d.cloudfront.net/hybrid/headband/badge?width=340",
+    "id": 1
+  },
+  {
+    "name": "jillybean",
+    "src": "https://d3ix816x6wuc0d.cloudfront.net/hybrid/jillybean/badge?width=340",
+    "id": 2
+  },
+  {
+    "name": "ghost og",
+    "src": "https://d3ix816x6wuc0d.cloudfront.net/hybrid/ghost-og/badge",
+    "id": 3
+  },
+  {
+    "name": "chemdawg",
+    "src": "https://d3ix816x6wuc0d.cloudfront.net/hybrid/chemdawg/badge?width=340",
+    "id": 4
+  },
+  {
+    "name": "durban poison",
+    "src": "https://s3.amazonaws.com/leafly-s3/content/7-high-energy-strains-to-help-you-get-active-and-fight-fatigue/Fdu6Usf4T6aLYxrYAtII_Dp.png",
+    "id": 5
+  },
+  {
+    "name": "harlequin",
+    "src": "https://s3.amazonaws.com/leafly-s3/content/best-cannabis-strains-for-fibromyalgia/VxqYCTgTKqFpDjxKnsMm_har.png",
+    "id": 6
+  },
+  {
+    "name": "sour diesel",
+    "src": "https://s3.amazonaws.com/leafly-s3/content/how-to-pair-fresh-spring-and-summer-produce-with-cannabis/TFGxL7GGSXaJP5E33xz3_sour-diesel-cannabis-strain-tile.png",
+    "id": 7
+  },
+  {
+    "name": "jack herer",
+    "src": "https://d3ix816x6wuc0d.cloudfront.net/sativa/jack-herer/badge?width=340",
+    "id": 8
+  },
+  {
+    "name": "death star",
+    "src": "https://d3ix816x6wuc0d.cloudfront.net/indica/death-star/badge?width=340",
+    "id": 9
+  },
+  {
+    "name": "grandaddy purp",
+    "src": "https://d3ix816x6wuc0d.cloudfront.net/indica/granddaddy-purple/badge?width=340",
+    "id": 10
+  },
+  {
+    "name": "bubba kush",
+    "src": "https://s3.amazonaws.com/leafly-s3/content/best-cannabis-strains-for-fibromyalgia/orpTIpzuT9q4gKyU5rrD_bk.png",
+    "id": 11
+  },
+  {
+    "name": "northern lights",
+    "src": "https://d3ix816x6wuc0d.cloudfront.net/indica/northern-lights/badge?width=340",
+    "id": 12
+  }]
